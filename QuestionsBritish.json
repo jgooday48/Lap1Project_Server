@@ -1,0 +1,45 @@
+
+[
+    {
+        "question": "who out of the following was not one of Henry VIIIs wives?",
+        "Answer 1": "Catherine of Aragon",
+        "Answer 2": "Catherine Parr",
+        "Answer 3": "Anne of Cleeves",
+        "Correct Answer": "Elizabeth of York",
+        "id": 1
+    },
+    {
+        "question": "In what year was the Battle of Hastings?",
+        "Answer 1": 1086,
+        "Answer 2": 1056,
+        "Answer 3": 986,
+        "Correct Answer": 1066,
+        "id": 2
+    },
+    {
+        "question": "Which King of England signed the Magna Carta",
+        "Answer 1": "Edward II",
+        "Answer 2": "Richard II",
+        "Answer 3": "Henry III",
+        "Correct Answer": "John",
+        "id": 3
+    },
+    {
+        "question": "Which king of England was executed in 1649",
+        "Answer 1": "William III",
+        "Answer 2": "Charles II",
+        "Answer 3": "James II",
+        "Correct Answer": "Charles I",
+        "id": 4
+    },
+    {
+        "question": "Where did the Beatles originate from",
+        "Answer 1": "Manchester",
+        "Answer 2": "Leeds",
+        "Answer 3": "London",
+        "Correct Answer": "Liverpool",
+        "id": 5
+    }
+    
+
+]
