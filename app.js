@@ -19,6 +19,22 @@ app.get('/', (req, res) => {
     );
 });
 
+app.get('/questions', (req, res) => {
+   res.send(questions)
+ })  
+
+app.get('/questions/:id', (req, res) => {
+  const idx = req.params.id
+
+  const question = questions[idx - 1]
+  
+  if (!question) {
+    res.status(404).json({ message: `questions with id ${idx} not found` })
+  } else {
+    res.send(question)
+  }
+  })
+
 // question randomiser route
 app.get('/questions/random', (req, res) => {
   const randomIndex = Math.floor(Math.random() * questions.length);
