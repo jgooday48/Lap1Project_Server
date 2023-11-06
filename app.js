@@ -19,4 +19,10 @@ app.get('/', (req, res) => {
     );
 });
 
+// question randomiser route
+app.get('/questions/random', (req, res) => {
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  res.status(200).send(questions[randomIndex]);
+});
+
 module.exports = app;
