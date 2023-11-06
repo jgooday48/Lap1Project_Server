@@ -12,11 +12,9 @@ app.use(logger);
 
 // home route
 app.get('/', (req, res) => {
-  res
-    .status(200)
-    .send(
-      `Welcome to the history quiz questions API! There are ${questions.length} available.`
-    );
+  res.status(200).send({
+    message: `Welcome to the history quiz questions API! There are ${questions.length} available.`
+  });
 });
 
 // list of questions route
