@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
+// home route
 app.get('/', (req, res) => {
   res
     .status(200)
