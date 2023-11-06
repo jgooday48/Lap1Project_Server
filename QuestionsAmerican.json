@@ -1,42 +1,42 @@
 [
   {
     "question": "who was the first US president",
-    "Answer-1": "Benjamin Franklin",
-    "Answer-2": "John Adams",
-    "Answer-3": "Calvin Coolidge",
-    "Correct-Answer": "George Washington",
+    "answer_1": "Benjamin Franklin",
+    "answer_2": "John Adams",
+    "answer_3": "Calvin Coolidge",
+    "correct_answer": "George Washington",
     "id": 1
   },
   {
     "question": "Who was the only US president to serve two non-consecutive terms in office",
-    "Answer-1": "John Quincey Adams",
-    "Answer-2": "Richard Nixon",
-    "Answer-3": "Lyndon B Johnson",
-    "Correct-Answer": "Grover Cleveland",
+    "answer_1": "John Quincey Adams",
+    "answer_2": "Richard Nixon",
+    "answer_3": "Lyndon B Johnson",
+    "correct_answer": "Grover Cleveland",
     "id": 2
   },
   {
     "question": "In what year was the declaration of independance signed",
-    "Answer-1": 1778,
-    "Answer-2": 1780,
-    "Answer-3": 1777,
-    "Correct-Answer": 1776,
+    "answer_1": 1778,
+    "answer_2": 1780,
+    "answer_3": 1777,
+    "correct_answer": 1776,
     "id": 3
   },
   {
     "question": "Who out of the following was not a Vice-President before becoming the president of the US",
-    "Answer-1": "Lyndon B Johnson",
-    "Answer-2": "Gerald Ford",
-    "Answer-3": "Franklin D Roosevelt",
-    "Correct-Answer": "Harry Truman",
+    "answer_1": "Lyndon B Johnson",
+    "answer_2": "Gerald Ford",
+    "answer_3": "Franklin D Roosevelt",
+    "correct_answer": "Harry Truman",
     "id": 4
   },
   {
     "question": "Which president is not shown on mount rushmore",
-    "Answer-1": "Abraham Lincoln",
-    "Answer-2": "Thomas Jefferson",
-    "Answer-3": "Theodore Roosevelt",
-    "Correct-Answer": "John Adams",
+    "answer_1": "Abraham Lincoln",
+    "answer_2": "Thomas Jefferson",
+    "answer_3": "Theodore Roosevelt",
+    "correct_answer": "John Adams",
     "id": 5
   }
 ]
