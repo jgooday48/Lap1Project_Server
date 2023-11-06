@@ -1,6 +1,6 @@
 [
   {
-    "question": "Who out of the following was not one of Henry VIII's wives",
+    "question": "Who out of the following was not one of Henry VIII's wives?",
     "answer_1": "Catherine of Aragon",
     "answer_2": "Catherine Parr",
     "answer_3": "Anne of Cleeves",
@@ -16,7 +16,7 @@
     "id": 2
   },
   {
-    "question": "Which King of England signed the Magna Carta",
+    "question": "Which King of England signed the Magna Carta?",
     "answer_1": "Edward II",
     "answer_2": "Richard II",
     "answer_3": "Henry III",
@@ -24,7 +24,7 @@
     "id": 3
   },
   {
-    "question": "Which King of England was executed in 1649",
+    "question": "Which King of England was executed in 1649?",
     "answer_1": "William III",
     "answer_2": "Charles II",
     "answer_3": "James II",
@@ -32,7 +32,7 @@
     "id": 4
   },
   {
-    "question": "Where did the Beatles originate from",
+    "question": "Where did the Beatles originate from?",
     "answer_1": "Manchester",
     "answer_2": "Leeds",
     "answer_3": "London",
