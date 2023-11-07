@@ -38,5 +38,13 @@
     "answer_3": "Theodore Roosevelt",
     "correct_answer": "John Adams",
     "id": 5
+  },
+  {
+    "question": "Who was the US President when the Wall Street Crash hit America?",
+    "answer_1": "Dwight D Eisenhower",
+    "answer_2": "Woodrow Wilson",
+    "answer_3": "Theodore Roosevelt",
+    "correct_answer": "Herbert Hoover",
+    "id": 6
   }
 ]
