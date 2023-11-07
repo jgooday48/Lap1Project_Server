@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const british = require('./QuestionsBritish.json');
 const american = require('./QuestionsAmerican.json');
+let copyObjBritish = british;
+let copyObjAmerican = american;
 const logger = require('./logger');
 
 const app = express();
@@ -28,16 +30,38 @@ app.get('/questions/american', (req, res) => {
   res.send(american);
 });
 
-// british question randomiser route
-app.get('/questions/british/random', (req, res) => {
+// british question randomiser route - practice mode
+app.get('/questions/british/random/practice', (req, res) => {
   const randomIndex = Math.floor(Math.random() * british.length);
   res.status(200).send(british[randomIndex]);
 });
 
-// american question randomiser route
-app.get('/questions/american/random', (req, res) => {
+// british question randomiser route - test mode
+app.get('/questions/british/random/test', (req, res) => {
+  if (!copyObjBritish.length) copyObjBritish = british;
+
+  const randomIndex = Math.floor(Math.random() * copyObjBritish.length);
+  res.status(200).send(copyObjBritish[randomIndex]);
+  copyObjBritish = copyObjBritish.filter(
+    (question, index) => index !== randomIndex
+  );
+});
+
+// american question randomiser route - practice mode
+app.get('/questions/american/random/practice', (req, res) => {
   const randomIndex = Math.floor(Math.random() * american.length);
   res.status(200).send(american[randomIndex]);
+});
+
+// american question randomiser route - test mode
+app.get('/questions/american/random/test', (req, res) => {
+  if (!copyObjAmerican.length) copyObjAmerican = american;
+
+  const randomIndex = Math.floor(Math.random() * copyObjAmerican.length);
+  res.status(200).send(copyObjAmerican[randomIndex]);
+  copyObjAmerican = copyObjAmerican.filter(
+    (question, index) => index !== randomIndex
+  );
 });
 
 // specific british question route
