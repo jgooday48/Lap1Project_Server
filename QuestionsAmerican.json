@@ -1,6 +1,6 @@
 [
   {
-    "question": "who was the first US president",
+    "question": "Who was the first US President?",
     "answer_1": "Benjamin Franklin",
     "answer_2": "John Adams",
     "answer_3": "Calvin Coolidge",
@@ -8,7 +8,7 @@
     "id": 1
   },
   {
-    "question": "Who was the only US president to serve two non-consecutive terms in office",
+    "question": "Who was the only US President to serve two non-consecutive terms in office?",
     "answer_1": "John Quincey Adams",
     "answer_2": "Richard Nixon",
     "answer_3": "Lyndon B Johnson",
@@ -16,7 +16,7 @@
     "id": 2
   },
   {
-    "question": "In what year was the declaration of independance signed",
+    "question": "In what year was the declaration of independence signed?",
     "answer_1": 1778,
     "answer_2": 1780,
     "answer_3": 1777,
@@ -24,15 +24,15 @@
     "id": 3
   },
   {
-    "question": "Who out of the following was not a Vice-President before becoming the president of the US",
+    "question": "Who out of the following was not a Vice-President prior to becoming the President of the US?",
     "answer_1": "Lyndon B Johnson",
     "answer_2": "Gerald Ford",
-    "answer_3": "Franklin D Roosevelt",
-    "correct_answer": "Harry Truman",
+    "answer_3": "Harry Truman",
+    "correct_answer": "Franklin D Roosevelt",
     "id": 4
   },
   {
-    "question": "Which president is not shown on mount rushmore",
+    "question": "Which US President is not shown on Mount Rushmore?",
     "answer_1": "Abraham Lincoln",
     "answer_2": "Thomas Jefferson",
     "answer_3": "Theodore Roosevelt",
