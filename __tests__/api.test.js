@@ -109,7 +109,7 @@ describe('api server', () => {
     test('responds to GET /questions/american/1 with status 200', (done) => {
       request(api).get('/questions/american/1').expect(200).expect(
         {
-          question: 'who was the first US president',
+          question: 'Who was the first US President?',
           answer_1: 'Benjamin Franklin',
           answer_2: 'John Adams',
           answer_3: 'Calvin Coolidge',
