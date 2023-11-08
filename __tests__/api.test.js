@@ -64,9 +64,9 @@ describe('api server', () => {
       request(api).get('/questions/british').expect(200, done);
     });
 
-    test('GET /questions/british displays 6 elements in the web browser', async () => {
+    test('GET /questions/british displays 10 elements in the web browser', async () => {
       const response = await request(api).get('/questions/british');
-      expect(response.body.length).toBe(6);
+      expect(response.body.length).toBe(10);
     });
   });
 
@@ -75,9 +75,9 @@ describe('api server', () => {
       request(api).get('/questions/american').expect(200, done);
     });
 
-    test('GET /questions/american displays 6 elements in the web browser', async () => {
+    test('GET /questions/american displays 10 elements in the web browser', async () => {
       const response = await request(api).get('/questions/american');
-      expect(response.body.length).toBe(6);
+      expect(response.body.length).toBe(10);
     });
   });
 
@@ -142,7 +142,7 @@ describe('api server', () => {
         .send(testData)
         .set('Accept', 'application/json')
         .expect(201)
-        .expect({ ...testData, id: 7 }, done);
+        .expect({ ...testData, id: 11 }, done);
     });
 
     test('throws a 422 if create unsuccessful', (done) => {
@@ -177,7 +177,7 @@ describe('api server', () => {
         .send(testData)
         .set('Accept', 'application/json')
         .expect(201)
-        .expect({ ...testData, id: 7 }, done);
+        .expect({ ...testData, id: 11 }, done);
     });
 
     test('throws a 422 if create unsuccessful', (done) => {
