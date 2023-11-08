@@ -47,7 +47,7 @@ app.get('/questions/british/random/test', (req, res) => {
     outputArrBritish = [];
   }
 
-  const randomIndex = Math.floor(Math.random() * copyObjBritish.length);
+  const randomIndex = (copyObjBritish.length * Math.random()) | 0;
   res.status(200).send(copyObjBritish[randomIndex]);
 
   outputArrBritish.push(copyObjBritish[randomIndex].id);
@@ -75,7 +75,7 @@ app.get('/questions/american/random/test', (req, res) => {
     outputArrAmerican = [];
   }
 
-  const randomIndex = Math.floor(Math.random() * copyObjAmerican.length);
+  const randomIndex = (copyObjAmerican.length * Math.random()) | 0;
   res.status(200).send(copyObjAmerican[randomIndex]);
 
   outputArrAmerican.push(copyObjAmerican[randomIndex].id);
