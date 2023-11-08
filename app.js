@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
-let copyObjBritish = { ...british },
-  copyObjAmerican = { ...american },
+let copyObjBritish = [...british],
+  copyObjAmerican = [...american],
   outputArrBritish = [],
   outputArrAmerican = [];
 
