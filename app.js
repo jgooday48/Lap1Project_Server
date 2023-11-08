@@ -4,6 +4,7 @@ const british = require('./QuestionsBritish.json');
 const american = require('./QuestionsAmerican.json');
 let copyObjBritish = british;
 let copyObjAmerican = american;
+let outputArr = [];
 const logger = require('./logger');
 
 const app = express();
@@ -38,13 +39,22 @@ app.get('/questions/british/random/practice', (req, res) => {
 
 // british question randomiser route - test mode
 app.get('/questions/british/random/test', (req, res) => {
-  if (!copyObjBritish.length) copyObjBritish = british;
+  console.log('length before: ', copyObjBritish.length);
+  if (!copyObjBritish.length) {
+    copyObjBritish = british;
+    outputArr = [];
+  }
 
   const randomIndex = Math.floor(Math.random() * copyObjBritish.length);
   res.status(200).send(copyObjBritish[randomIndex]);
+  outputArr.push(copyObjBritish[randomIndex].id);
+  console.log(copyObjBritish[randomIndex]);
+  console.log('previous ids: ', outputArr);
   copyObjBritish = copyObjBritish.filter(
     (question, index) => index !== randomIndex
   );
+  console.log('length after: ', copyObjBritish.length);
+  console.log('---------------');
 });
 
 // american question randomiser route - practice mode
