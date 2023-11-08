@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
-let copyObjBritish = british,
-  copyObjAmerican = american,
+let copyObjBritish = { ...british },
+  copyObjAmerican = { ...american },
   outputArrBritish = [],
   outputArrAmerican = [];
 
@@ -43,7 +43,7 @@ app.get('/questions/british/random/practice', (req, res) => {
 app.get('/questions/british/random/test', (req, res) => {
   console.log('length before: ', copyObjBritish.length);
   if (!copyObjBritish.length) {
-    copyObjBritish = british;
+    copyObjBritish = [...british];
     outputArrBritish = [];
   }
 
@@ -51,11 +51,11 @@ app.get('/questions/british/random/test', (req, res) => {
   res.status(200).send(copyObjBritish[randomIndex]);
 
   outputArrBritish.push(copyObjBritish[randomIndex].id);
-  console.log(copyObjBritish[randomIndex]);
   console.log('previous ids: ', outputArrBritish);
 
   copyObjBritish = copyObjBritish.filter(
-    (question, index) => index !== randomIndex
+    (question, index) =>
+      index !== randomIndex && question.id !== copyObjBritish[randomIndex].id
   );
 
   console.log('length after: ', copyObjBritish.length);
@@ -70,21 +70,25 @@ app.get('/questions/american/random/practice', (req, res) => {
 
 // american question randomiser route - test mode
 app.get('/questions/american/random/test', (req, res) => {
+  console.log('length before: ', copyObjAmerican.length);
+  console.log('---------------');
+  console.log('copy: ', copyObjAmerican);
+  console.log('---------------');
+  console.log('og:', american);
+
   if (!copyObjAmerican.length) {
-    copyObjAmerican = american;
+    copyObjAmerican = [...american];
     outputArrAmerican = [];
   }
 
-  const randomIndex = (copyObjAmerican.length * Math.random()) | 0;
+  const randomIndex = Math.floor(Math.random() * copyObjAmerican.length);
   res.status(200).send(copyObjAmerican[randomIndex]);
 
+  console.log('selected question: ', copyObjAmerican[randomIndex]);
   outputArrAmerican.push(copyObjAmerican[randomIndex].id);
-  console.log(copyObjAmerican[randomIndex]);
   console.log('previous ids: ', outputArrAmerican);
 
-  copyObjAmerican = copyObjAmerican.filter(
-    (question, index) => index !== randomIndex
-  );
+  copyObjAmerican.splice(randomIndex, 1);
 
   console.log('length after: ', copyObjAmerican.length);
   console.log('---------------');
