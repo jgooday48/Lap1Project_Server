@@ -75,9 +75,9 @@ describe('api server', () => {
       request(api).get('/questions/american').expect(200, done);
     });
 
-    test('GET /questions/american displays 5 elements in the web browser', async () => {
+    test('GET /questions/american displays 6 elements in the web browser', async () => {
       const response = await request(api).get('/questions/american');
-      expect(response.body.length).toBe(5);
+      expect(response.body.length).toBe(6);
     });
   });
 
@@ -177,7 +177,7 @@ describe('api server', () => {
         .send(testData)
         .set('Accept', 'application/json')
         .expect(201)
-        .expect({ ...testData, id: 6 }, done);
+        .expect({ ...testData, id: 7 }, done);
     });
 
     test('throws a 422 if create unsuccessful', (done) => {
