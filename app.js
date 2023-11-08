@@ -33,7 +33,7 @@ app.get('/questions/american', (req, res) => {
 
 // british question randomiser route - practice mode
 app.get('/questions/british/random/practice', (req, res) => {
-  const randomIndex = Math.floor(Math.random() * british.length);
+  const randomIndex = Math.floor(Math.random() * british.length - 1);
   res.status(200).send(british[randomIndex]);
 });
 
@@ -65,13 +65,16 @@ app.get('/questions/american/random/practice', (req, res) => {
 
 // american question randomiser route - test mode
 app.get('/questions/american/random/test', (req, res) => {
+  console.log('length before: ', copyObjAmerican.length);
   if (!copyObjAmerican.length) copyObjAmerican = american;
 
-  const randomIndex = Math.floor(Math.random() * copyObjAmerican.length);
+  const randomIndex = Math.floor(Math.random() * copyObjAmerican.length - 1);
   res.status(200).send(copyObjAmerican[randomIndex]);
   copyObjAmerican = copyObjAmerican.filter(
     (question, index) => index !== randomIndex
   );
+  console.log('length after: ', copyObjAmerican.length);
+  console.log('---------------');
 });
 
 // specific british question route
