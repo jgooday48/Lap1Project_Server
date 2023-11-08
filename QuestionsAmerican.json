@@ -46,5 +46,37 @@
     "answer_3": "Theodore Roosevelt",
     "correct_answer": "Herbert Hoover",
     "id": 6
+  },
+  {
+    "question": "In what year was the Cuban Missile Crisis?",
+    "answer_1": 1960,
+    "answer_2": 1963,
+    "answer_3": 1961,
+    "correct_answer": 1962,
+    "id": 7
+  },
+  {
+    "question": "Who was the only US president to have resigned from office?",
+    "answer_1": "Zachary Taylor",
+    "answer_2": "Martin Van Buren",
+    "answer_3": "Ulysses S. Grant",
+    "correct_answer": "Richard Nixon",
+    "id": 8
+  },
+  {
+    "question": "Which of the following US presidents was not assassinated whilst in office?",
+    "answer_1": "James A. Garfield",
+    "answer_2": "John F. Kennedy",
+    "answer_3": "William McKinley",
+    "correct_answer": "Warren G. Harding",
+    "id": 9
+  },
+  {
+    "question": "Ronald Reagan was Governer of which US State prior to becoming the President",
+    "answer_1": "Texas",
+    "answer_2": "New York",
+    "answer_3": "Florida",
+    "correct_answer": "California",
+    "id": 10
   }
 ]
