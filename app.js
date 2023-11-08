@@ -2,9 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const british = require('./QuestionsBritish.json');
 const american = require('./QuestionsAmerican.json');
-let copyObjBritish = british;
-let copyObjAmerican = american;
-let outputArr = [];
 const logger = require('./logger');
 
 const app = express();
@@ -13,6 +10,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(logger);
+
+let copyObjBritish = british,
+  copyObjAmerican = american,
+  outputArrBritish = [],
+  outputArrAmerican = [];
 
 // home route
 app.get('/', (req, res) => {
@@ -42,17 +44,20 @@ app.get('/questions/british/random/test', (req, res) => {
   console.log('length before: ', copyObjBritish.length);
   if (!copyObjBritish.length) {
     copyObjBritish = british;
-    outputArr = [];
+    outputArrBritish = [];
   }
 
   const randomIndex = Math.floor(Math.random() * copyObjBritish.length);
   res.status(200).send(copyObjBritish[randomIndex]);
-  outputArr.push(copyObjBritish[randomIndex].id);
+
+  outputArrBritish.push(copyObjBritish[randomIndex].id);
   console.log(copyObjBritish[randomIndex]);
-  console.log('previous ids: ', outputArr);
+  console.log('previous ids: ', outputArrBritish);
+
   copyObjBritish = copyObjBritish.filter(
     (question, index) => index !== randomIndex
   );
+
   console.log('length after: ', copyObjBritish.length);
   console.log('---------------');
 });
@@ -65,13 +70,24 @@ app.get('/questions/american/random/practice', (req, res) => {
 
 // american question randomiser route - test mode
 app.get('/questions/american/random/test', (req, res) => {
-  if (!copyObjAmerican.length) copyObjAmerican = american;
+  if (!copyObjAmerican.length) {
+    copyObjAmerican = american;
+    outputArrAmerican = [];
+  }
 
   const randomIndex = Math.floor(Math.random() * copyObjAmerican.length);
   res.status(200).send(copyObjAmerican[randomIndex]);
+
+  outputArrAmerican.push(copyObjAmerican[randomIndex].id);
+  console.log(copyObjAmerican[randomIndex]);
+  console.log('previous ids: ', outputArrAmerican);
+
   copyObjAmerican = copyObjAmerican.filter(
     (question, index) => index !== randomIndex
   );
+
+  console.log('length after: ', copyObjAmerican.length);
+  console.log('---------------');
 });
 
 // specific british question route
