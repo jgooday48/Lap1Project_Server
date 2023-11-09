@@ -36,4 +36,19 @@ This acts as the back-end component of Team Velocity's Quiz App, where quiz ques
 - Express.js
 - cors 
 
+## Process
+- Started by installing the necessary modules such as express, cors and nodemon
+- Created a port 
+- Created a logger
+- Created two json files with the questions and possible answers
+- Edited the main app.js script to allow questions to be displayed on the client side at random
+
+## Wins and Challenges
+### Wins
+- Got the api to connect successfully to the client side
+- Got questions to be outputted at random
+
+## Future Features
+- Will add more json files with more quiz categories.
+- Update current json files with more questions
 
