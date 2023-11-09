@@ -29,3 +29,11 @@ This acts as the back-end component of Team Velocity's Quiz App, where quiz ques
 | `/questions`        | `POST` | Accepts a JSON object and uses it to create and store a new quiz question.                                                                                                                                                          |
 | `/questions/random` | `GET`  | Returns a random quiz question from the collection as a JSON object.                                                                                                                                                                |
 | `/questions/:id`    | `GET`  | Returns a JSON object representing a single quiz question from the collection, selected by `:id`. If the id is invalid (non-numeric or out-of-bounds), returns a JSON object explaining the problem, with `404` as the status code. |
+
+
+## Technologies
+- JavaScript
+- Express.js
+- cors 
+
+
